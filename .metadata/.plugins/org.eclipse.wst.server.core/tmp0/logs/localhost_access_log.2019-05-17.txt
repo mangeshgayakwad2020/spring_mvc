@@ -1,0 +1,6 @@
+127.0.0.1 - - [17/May/2019:19:19:29 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [17/May/2019:19:19:32 +0530] "GET /Spring_MVC_Overview/ HTTP/1.1" 200 252
+0:0:0:0:0:0:0:1 - - [17/May/2019:19:19:35 +0530] "GET /Spring_MVC_Overview/athlete/displayForm HTTP/1.1" 200 754
+0:0:0:0:0:0:0:1 - - [17/May/2019:19:19:57 +0530] "POST /Spring_MVC_Overview/athlete/registerAthlete HTTP/1.1" 200 216
+0:0:0:0:0:0:0:1 - - [17/May/2019:19:20:43 +0530] "POST /Spring_MVC_Overview/athlete/registerAthlete HTTP/1.1" 200 216
+0:0:0:0:0:0:0:1 - - [17/May/2019:19:25:19 +0530] "POST /Spring_MVC_Overview/athlete/registerAthlete HTTP/1.1" 200 216

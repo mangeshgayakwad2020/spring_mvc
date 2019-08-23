@@ -1,0 +1,23 @@
+package com.greatdigitallab.spring.mvc.validation;
+
+import javax.validation.ConstraintValidator;
+import javax.validation.ConstraintValidatorContext;
+
+public class CourseCodeConstraintValidator implements ConstraintValidator<GameCode, String> {
+
+	private String codePrefix;
+	
+	@Override
+	public void initialize(GameCode gameCode) {
+		codePrefix = gameCode.value();
+	}
+	
+	@Override
+	public boolean isValid(String gameCode, ConstraintValidatorContext arg1) {
+		
+		boolean result = gameCode.startsWith(codePrefix);
+		
+		return result;
+	}
+
+}

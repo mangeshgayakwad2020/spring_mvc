@@ -1,0 +1,92 @@
+package com.greatdigitallab.spring.mvc;
+
+import java.util.LinkedHashMap;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/athlete")
+public class AthleteController {
+
+	@Value("#{countryOptions}")
+	private LinkedHashMap<String, String> countryOptions;
+
+	@Value("#{favouriteSportOptions}")
+	private LinkedHashMap<String, String> favouriteSportOptions;
+
+	/*
+	 * Crate InitBinder method with @InitBinder annotation
+	 * to remove the leading and trailing white spaces
+	 */
+	@InitBinder
+	public void initBinder(WebDataBinder webDataBinder) {
+		
+		StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
+		
+		webDataBinder.registerCustomEditor(String.class, stringTrimmerEditor);
+	}
+	
+	@RequestMapping("/displayForm")
+	public String displayForm(Model model) {
+
+		// Create Athlete object
+		Athlete athlete = new Athlete();
+
+		// Add Athlete to Model
+		model.addAttribute("athlete", athlete);
+
+		// Add countryOptions to Model
+		model.addAttribute("countryOptions", countryOptions);
+
+		// Add favouriteSportOptions to Model
+		model.addAttribute("favouriteSportOptions", favouriteSportOptions);
+
+		return "athlete-form";
+	}
+
+	@RequestMapping("/registerAthlete")
+	public String registerAthlete(@ModelAttribute("athlete") Athlete athlete) {
+
+		// Console log the athlete data
+		System.out.println("\nAthlete : " + athlete.getFirstName() + " " + athlete.getLastName());
+		System.out.println("Country : " + athlete.getCountry());
+		System.out.println("Favourite Sport : " + athlete.getFavouriteSport());
+
+		return "athlete-confirmation";
+	}
+
+	@RequestMapping("/registerAthleteWithValidation")
+	public String registerAthleteWithValidation(Model model, @Valid @ModelAttribute("athlete") Athlete athlete, 
+			BindingResult theBindingResult) {
+
+		// Log the last name in console
+		System.out.println("Last Name : |" + athlete.getLastName() + "|");
+		
+		// Check if errors exist for validation
+		if(theBindingResult.hasErrors()) {
+			
+			// Add Athlete to Model
+			model.addAttribute("athlete", athlete);
+
+			// Add countryOptions to Model
+			model.addAttribute("countryOptions", countryOptions);
+
+			// Add favouriteSportOptions to Model
+			model.addAttribute("favouriteSportOptions", favouriteSportOptions);
+			
+			return "athlete-form";
+		}
+		return "athlete-confirmation";
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Spring_MVC_Static_Resources/WebContent/Resources/css/spring-css.css&apos; to &apos;spring-mvc-css.css&apos;" description="Rename resource &apos;spring-css.css&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/Resources/css/spring-css.css" name="spring-mvc-css.css" stamp="1557949356791" updateReferences="true"/>
+</session>

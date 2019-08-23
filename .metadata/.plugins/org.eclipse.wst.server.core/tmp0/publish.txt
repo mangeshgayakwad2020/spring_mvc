@@ -1,0 +1,9 @@
+#Tomcat publish data
+#Thu May 30 16:54:17 IST 2019
+org.eclipse.jst.jee.server\:/binary\:D\:\\Eclipse_Spring_MVC_Workspace\\Spring_MVC_Validator_Regex\\WebContent\\WEB-INF\\lib\\spring-web-5.1.6.RELEASE.jar=WEB-INF/lib/spring-web-5.1.6.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:D\:\\Eclipse_Spring_MVC_Workspace\\Spring_MVC_Form_Drop_Down_v3\\WebContent\\WEB-INF\\lib\\spring-web-5.1.6.RELEASE.jar=WEB-INF/lib/spring-web-5.1.6.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:D\:\\Eclipse_Spring_MVC_Workspace\\Spring_MVC_Form_Checkbox\\WebContent\\WEB-INF\\lib\\spring-web-5.1.6.RELEASE.jar=WEB-INF/lib/spring-web-5.1.6.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:D\:\\Eclipse_Spring_MVC_Workspace\\Spring_MVC_Validator_Custom_Validation_Value_Array\\WebContent\\WEB-INF\\lib\\spring-web-5.1.6.RELEASE.jar=WEB-INF/lib/spring-web-5.1.6.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:D\:\\Eclipse_Spring_MVC_Workspace\\Spring_MVC_Validator_Number_Range\\WebContent\\WEB-INF\\lib\\spring-web-5.1.6.RELEASE.jar=WEB-INF/lib/spring-web-5.1.6.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:D\:\\Eclipse_Spring_MVC_Workspace\\Spring_MVC_Form_Drop_Down_v2\\WebContent\\WEB-INF\\lib\\spring-web-5.1.6.RELEASE.jar=WEB-INF/lib/spring-web-5.1.6.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:D\:\\Eclipse_Spring_MVC_Workspace\\Spring_MVC_Form_Radio_Button_Prop_File\\WebContent\\WEB-INF\\lib\\spring-web-5.1.6.RELEASE.jar=WEB-INF/lib/spring-web-5.1.6.RELEASE.jar

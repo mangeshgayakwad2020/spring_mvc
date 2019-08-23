@@ -1,0 +1,8 @@
+package com.greatdigitallab.spring.mvc.validation;
+
+import javax.validation.Constraint;
+
+@Constraint(validatedBy = CourseCodeConstraintValidator.class)
+public @interface GameCode {
+
+}
